@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/mindgame/static/css/main.69746ad3.chunk.css",
+    "main.js": "/mindgame/static/js/main.14cacd9b.chunk.js",
+    "main.js.map": "/mindgame/static/js/main.14cacd9b.chunk.js.map",
+    "runtime-main.js": "/mindgame/static/js/runtime-main.047bfde0.js",
+    "runtime-main.js.map": "/mindgame/static/js/runtime-main.047bfde0.js.map",
+    "static/js/2.28a3c3d2.chunk.js": "/mindgame/static/js/2.28a3c3d2.chunk.js",
+    "static/js/2.28a3c3d2.chunk.js.map": "/mindgame/static/js/2.28a3c3d2.chunk.js.map",
+    "index.html": "/mindgame/index.html",
+    "static/css/main.69746ad3.chunk.css.map": "/mindgame/static/css/main.69746ad3.chunk.css.map",
+    "static/js/2.28a3c3d2.chunk.js.LICENSE.txt": "/mindgame/static/js/2.28a3c3d2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.047bfde0.js",
+    "static/js/2.28a3c3d2.chunk.js",
+    "static/css/main.69746ad3.chunk.css",
+    "static/js/main.14cacd9b.chunk.js"
+  ]
+}
