@@ -19,7 +19,12 @@ function App() {
 }
 function onCardClick(text,i){
 	console.log(text,i,cardflip,flippedCard)
-	if(cardflip){
+	if(i==flippedCard || matched.includes(i)){
+		return
+	}
+	setVisible([...visible,i])
+	setTimeout(()=>{
+		if(cardflip){
 		if(text==board[flippedCard]){
 			
 			let updatedBoard=[...board]
@@ -30,7 +35,14 @@ function onCardClick(text,i){
 			setFlippedCard(-1)
 			setCardFlip(false)
 			setMatches(match+1)
+			setMatched([...matched,i,flippedCard])
 		}
+		else{
+			setCardFlip(false)
+			setFlippedCard(-1)
+		}
+		setVisible([])
+
 
 	}
 	else{
@@ -38,6 +50,8 @@ function onCardClick(text,i){
 		setFlippedCard(i);
 
 	}
+	},300)
+	
 	setCount(count+1)
 }
 
@@ -46,17 +60,29 @@ const [cardflip,setCardFlip]=useState(false);
 const [flippedCard,setFlippedCard]=useState(-1);
 const [count,setCount]=useState(0);
 const [match,setMatches]=useState(0);
+const [visible,setVisible]=useState([])
+const [matched,setMatched]=useState([])
+
 console.log(generate());
+	useEffect(()=>{
+		window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+
+	},[])
     return ( 
         <div className = "App" >
         <div className="left-section">
-		<div className="matches" >{match}</div>
-		<div className="menu" >{count}</div>
+		<div className="matches" ><h3>Matches</h3><p>{match}</p></div>
+		<div className="menu" ><h3>Turns</h3><p>{count}</p></div>
 		</div>
+		<div className="container">
         <div className="Board">
         {board.map((card,i) =>(
-        	<Card text={card} key={i} onClickHandler={onCardClick} index={i} isVisible={i==flippedCard}/>
+        	<Card text={card} key={i} onClickHandler={onCardClick} index={i} isVisible={visible.includes(i)} isMatched={matched.includes(i)}/>
         	))}
+        </div>
         </div>
         </div>
     );

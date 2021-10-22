@@ -2,10 +2,33 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5px;
-  justify-content: center;
+  align-content: center;
   outline: 2px solid black;
+  width: 50%;
+
 }
 .App{
   display: flex;
   
+}
+.left-section{
+  width: 30%;
+  max-width: 300px;
+  padding: 20px;
+}
+.container{
+  
+  width:100%;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+.matches,.menu{
+  
+  padding: 10px 20px;
+  margin:20px 5px;
+  text-align: center;
+  background-color: pink; 
+
 }
