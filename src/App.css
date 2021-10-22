@@ -1,0 +1,11 @@
+.Board{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  justify-content: center;
+  outline: 2px solid black;
+}
+.App{
+  display: flex;
+  
+}
